@@ -1,4 +1,4 @@
-package proxify
+package tinydns
 
 import (
 	"net"
