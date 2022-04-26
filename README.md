@@ -1,0 +1,2 @@
+## Description
+embeddable dns server
