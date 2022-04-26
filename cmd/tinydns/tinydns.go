@@ -1,10 +1,10 @@
 package main
 
 import (
-	"flag"
 	"os"
 	"os/signal"
 
+	"github.com/projectdiscovery/goflags"
 	"github.com/projectdiscovery/gologger"
 	"github.com/projectdiscovery/tinydns"
 )
@@ -12,12 +12,21 @@ import (
 func main() {
 	options := &tinydns.Options{}
 
-	flag.BoolVar(&options.DiskCache, "disk", true, "Use disk cache")
-	flag.StringVar(&options.ListenAddress, "listen", "127.0.0.1:53", "Listen Address")
-	flag.StringVar(&options.Net, "net", "udp", "Network (tcp, udp)")
-	flag.Parse()
+	flagSet := goflags.NewFlagSet()
+	flagSet.SetDescription(`tinydns - Embeddable dns server.`)
 
-	options.UpstreamServers = []string{"8.8.8.8:53"}
+	flagSet.BoolVar(&options.DiskCache, "disk", true, "Use disk cache")
+	flagSet.StringVar(&options.ListenAddress, "listen", "127.0.0.1:53", "Listen Address")
+	flagSet.StringVar(&options.Net, "net", "udp", "Network (tcp, udp)")
+	var upstreamServers goflags.StringSlice
+	flagSet.StringSliceVar(&upstreamServers, "upstream", []string{"1.1.1.1"}, "Upstream servers")
+
+	if err := flagSet.Parse(); err != nil {
+		gologger.Fatal().Msgf("Could not parse options: %s\n", err)
+	}
+
+	// command line types are converted to standard ones
+	options.UpstreamServers = upstreamServers
 
 	tdns, err := tinydns.New(options)
 	if err != nil {
