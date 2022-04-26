@@ -3,11 +3,11 @@ package tinydns
 import (
 	"bytes"
 	"encoding/gob"
-	"log"
 	"net"
 	"strings"
 
 	"github.com/miekg/dns"
+	"github.com/projectdiscovery/gologger"
 	"github.com/projectdiscovery/hmap/store/hybrid"
 	"github.com/projectdiscovery/sliceutil"
 )
@@ -42,24 +42,28 @@ func New(options *Options) (*TinyDNS, error) {
 func (t *TinyDNS) ServeDNS(w dns.ResponseWriter, r *dns.Msg) {
 	domain := r.Question[0].Name
 	domainlookup := strings.TrimSuffix(domain, ".")
+	gologger.Info().Msgf("Received request for: %s\n", domainlookup)
 	switch r.Question[0].Qtype {
 	case dns.TypeA:
 		// attempts in order to retrieve the record in the following fallback-chain
 		if dnsRecord, ok := t.options.DnsRecords[domainlookup]; ok { // - hardcoded records
+			gologger.Info().Msgf("Using in-memory record for %s.\n", domainlookup)
 			_ = w.WriteMsg(reply(r, domain, dnsRecord))
 		} else if dnsRecord, ok = t.options.DnsRecords["*"]; ok { // - wildcard
+			gologger.Info().Msgf("Using in-memory wildcard record for %s.\n", domainlookup)
 			_ = w.WriteMsg(reply(r, domain, dnsRecord))
 		} else if dnsRecordBytes, ok := t.hm.Get(domain); ok { // - cache
 			dnsRecord := &DnsRecord{}
 			err := gob.NewDecoder(bytes.NewReader(dnsRecordBytes)).Decode(dnsRecord)
 			if err == nil {
+				gologger.Info().Msgf("Using cached record for %s.\n", domainlookup)
 				_ = w.WriteMsg(reply(r, domain, dnsRecord))
 			}
 		} else if len(t.options.UpstreamServers) > 0 {
 			// upstream and store in cache
 			upstreamServer := sliceutil.PickRandom(t.options.UpstreamServers)
+			gologger.Info().Msgf("Retrieving records for %s with upstream %s.\n", domainlookup, upstreamServer)
 			msg, err := dns.Exchange(r, upstreamServer)
-			log.Println(msg, err)
 			if err == nil {
 				_ = w.WriteMsg(msg)
 				dnsRecord := &DnsRecord{}
@@ -73,6 +77,7 @@ func (t *TinyDNS) ServeDNS(w dns.ResponseWriter, r *dns.Msg) {
 				}
 				var dnsRecordBytes bytes.Buffer
 				if err := gob.NewEncoder(&dnsRecordBytes).Encode(dnsRecord); err == nil {
+					gologger.Info().Msgf("Saving records for %s in cache.\n", domainlookup)
 					_ = t.hm.Set(domain, dnsRecordBytes.Bytes())
 				}
 			}
