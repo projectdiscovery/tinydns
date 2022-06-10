@@ -33,6 +33,9 @@ func main() {
 		gologger.Fatal().Msgf("Could not create tinydns instance: %s\n", err)
 	}
 	gologger.Info().Msgf("Listening on: %s:%s\n", options.Net, options.ListenAddress)
+	tdns.OnServeDns = func(data tinydns.Info) {
+		gologger.Info().Msgf("%s\n", data.Msg)
+	}
 
 	// Setup graceful exits
 	c := make(chan os.Signal, 1)
