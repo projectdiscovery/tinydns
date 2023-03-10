@@ -1,0 +1,9 @@
+cmd/tinydns/tinydns
+.DS_Store
+dist/
+cmd/functional-test/tinydns_dev
+cmd/functional-test/functional-test
+cmd/functional-test/tinydns
+cmd/functional-test/log.txt
+cmd/functional-test/*.cfg
+.vscode/
