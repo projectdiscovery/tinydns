@@ -19,7 +19,7 @@ func main() {
 	flagSet.StringVar(&options.ListenAddress, "listen", "127.0.0.1:53", "Listen Address")
 	flagSet.StringVar(&options.Net, "net", "udp", "Network (tcp, udp)")
 	var upstreamServers goflags.StringSlice
-	flagSet.StringSliceVar(&upstreamServers, "upstream", []string{"1.1.1.1:53"}, "Upstream servers")
+	flagSet.StringSliceVar(&upstreamServers, "upstream", []string{"1.1.1.1:53"}, "Upstream servers", goflags.FileCommaSeparatedStringSliceOptions)
 
 	if err := flagSet.Parse(); err != nil {
 		gologger.Fatal().Msgf("Could not parse options: %s\n", err)
