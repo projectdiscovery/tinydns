@@ -9,7 +9,7 @@ import (
 
 	"github.com/miekg/dns"
 	"github.com/projectdiscovery/hmap/store/hybrid"
-	"github.com/projectdiscovery/sliceutil"
+	sliceutil "github.com/projectdiscovery/utils/slice"
 )
 
 type TinyDNS struct {

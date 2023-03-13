@@ -1,13 +1,13 @@
 module github.com/projectdiscovery/tinydns
 
-go 1.17
+go 1.18
 
 require (
 	github.com/miekg/dns v1.1.51
 	github.com/projectdiscovery/goflags v0.0.8-0.20220426153734-2ffbfbff923c
 	github.com/projectdiscovery/gologger v1.1.8
 	github.com/projectdiscovery/hmap v0.0.9
-	github.com/projectdiscovery/sliceutil v0.0.1
+	github.com/projectdiscovery/utils v0.0.15
 )
 
 require (
@@ -46,7 +46,6 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/projectdiscovery/fileutil v0.0.0-20220308101036-16c79af1cf5d // indirect
 	github.com/projectdiscovery/stringsutil v0.0.0-20220208075244-7c05502ca8e9 // indirect
-	github.com/projectdiscovery/utils v0.0.13 // indirect
 	github.com/prometheus/client_golang v1.14.0 // indirect
 	github.com/prometheus/client_model v0.3.0 // indirect
 	github.com/prometheus/common v0.40.0 // indirect
