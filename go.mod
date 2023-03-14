@@ -3,7 +3,7 @@ module github.com/projectdiscovery/tinydns
 go 1.19
 
 require (
-	github.com/miekg/dns v1.1.51
+	github.com/miekg/dns v1.1.52
 	github.com/projectdiscovery/goflags v0.1.8
 	github.com/projectdiscovery/gologger v1.1.8
 	github.com/projectdiscovery/hmap v0.0.9
