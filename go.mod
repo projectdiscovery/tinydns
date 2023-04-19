@@ -3,11 +3,11 @@ module github.com/projectdiscovery/tinydns
 go 1.19
 
 require (
-	github.com/miekg/dns v1.1.51
+	github.com/miekg/dns v1.1.53
 	github.com/projectdiscovery/goflags v0.1.8
 	github.com/projectdiscovery/gologger v1.1.8
 	github.com/projectdiscovery/hmap v0.0.9
-	github.com/projectdiscovery/utils v0.0.16
+	github.com/projectdiscovery/utils v0.0.23
 )
 
 require (
@@ -63,9 +63,9 @@ require (
 	go.etcd.io/bbolt v1.3.7 // indirect
 	golang.org/x/exp v0.0.0-20230224173230-c95f2b4c22f2 // indirect
 	golang.org/x/mod v0.8.0 // indirect
-	golang.org/x/net v0.8.0 // indirect
-	golang.org/x/sys v0.6.0 // indirect
-	golang.org/x/text v0.8.0 // indirect
+	golang.org/x/net v0.9.0 // indirect
+	golang.org/x/sys v0.7.0 // indirect
+	golang.org/x/text v0.9.0 // indirect
 	golang.org/x/tools v0.6.0 // indirect
 	google.golang.org/protobuf v1.28.1 // indirect
 	gopkg.in/djherbis/times.v1 v1.3.0 // indirect
