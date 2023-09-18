@@ -7,7 +7,7 @@ require (
 	github.com/projectdiscovery/goflags v0.1.20
 	github.com/projectdiscovery/gologger v1.1.11
 	github.com/projectdiscovery/hmap v0.0.18
-	github.com/projectdiscovery/utils v0.0.54
+	github.com/projectdiscovery/utils v0.0.55
 )
 
 require (
