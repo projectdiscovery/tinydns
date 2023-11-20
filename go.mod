@@ -4,7 +4,7 @@ go 1.19
 
 require (
 	github.com/miekg/dns v1.1.55
-	github.com/projectdiscovery/goflags v0.1.27
+	github.com/projectdiscovery/goflags v0.1.28
 	github.com/projectdiscovery/gologger v1.1.11
 	github.com/projectdiscovery/hmap v0.0.25
 	github.com/projectdiscovery/utils v0.0.63
