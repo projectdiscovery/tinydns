@@ -87,8 +87,8 @@ github.com/projectdiscovery/blackrock v0.0.1 h1:lHQqhaaEFjgf5WkuItbpeCZv2DUIE45k
 github.com/projectdiscovery/blackrock v0.0.1/go.mod h1:ANUtjDfaVrqB453bzToU+YB4cUbvBRpLvEwoWIwlTss=
 github.com/projectdiscovery/goflags v0.1.60 h1:S1PtMHdEOFqb8CjkXuaomtqUptdApuV/IF2Wvn4QGZw=
 github.com/projectdiscovery/goflags v0.1.60/go.mod h1:8pKusnHPcnPW6WGDRG9auCZ6RH9twyDp3aETsijF73A=
-github.com/projectdiscovery/gologger v1.1.16 h1:NsYQVNt1H8O3Wmag4sXxQxvbLbIP16bjCm/cnCvf5hc=
-github.com/projectdiscovery/gologger v1.1.16/go.mod h1:WlyfroigIqU/in8A3fTEeMJ6t5NfbCG+rgWcvI5dQiQ=
+github.com/projectdiscovery/gologger v1.1.17 h1:4KWUgXGKLzXqyDAl9A+fiCcgGgHa4zo7++166xDRSqo=
+github.com/projectdiscovery/gologger v1.1.17/go.mod h1:JAo10tJopMAUHDdKTX/ZSb1QC/sgxfr5ovrd+SAt7fM=
 github.com/projectdiscovery/hmap v0.0.50 h1:ZFY1JF6y6BeBoEYXi7h0/y/LS+nxN1NUo+KsyqCSuJM=
 github.com/projectdiscovery/hmap v0.0.50/go.mod h1:cu4xZ/ZkntYI5NH7/ity6kK15XyjUF3fp78qb4shUxo=
 github.com/projectdiscovery/utils v0.2.2 h1:ZzanMTiVboM7vFO6cjt+GRDtvVjZD1GChBa7knekBgs=
