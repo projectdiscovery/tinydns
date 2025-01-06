@@ -6,8 +6,8 @@ require (
 	github.com/miekg/dns v1.1.56
 	github.com/projectdiscovery/goflags v0.1.65
 	github.com/projectdiscovery/gologger v1.1.38
-	github.com/projectdiscovery/hmap v0.0.72
-	github.com/projectdiscovery/utils v0.4.4
+	github.com/projectdiscovery/hmap v0.0.73
+	github.com/projectdiscovery/utils v0.4.5
 )
 
 require (
