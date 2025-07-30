@@ -7,3 +7,7 @@ cmd/functional-test/tinydns
 cmd/functional-test/log.txt
 cmd/functional-test/*.cfg
 .vscode/
+.claude/
+.specstory/
+logs/
+.cursorindexingignore
