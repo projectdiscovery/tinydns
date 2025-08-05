@@ -1,0 +1,234 @@
+# TinyDNS Configuration File
+# This file demonstrates all available configuration options
+
+# Upstream DNS server configuration (optional)
+upstream:
+  # Timeout for each upstream query
+  # Format: "Ns" (seconds), "Nms" (milliseconds), "Nm" (minutes)
+  timeout: "3s"
+  
+  # Number of retry attempts when upstream fails
+  # Each retry will use a different upstream server
+  retries: 3
+  
+  # Return a default response when all upstream servers fail
+  # If false, returns empty response on failure
+  fallback_response: false
+  
+  # Default A record IP when fallback_response is true
+  default_a: "0.0.0.0"
+  
+  # Default AAAA record IP when fallback_response is true
+  default_aaaa: "::"
+  
+  # Override upstream DNS servers (optional)
+  # If not specified, uses command line -upstream or default servers
+  servers:
+    - "8.8.8.8:53"      # Google Primary
+    - "8.8.4.4:53"      # Google Secondary
+    - "1.1.1.1:53"      # Cloudflare Primary
+    - "1.0.0.1:53"      # Cloudflare Secondary
+
+# DNS Records
+records:
+  # ===== A Records (IPv4) =====
+  
+  # Simple A record
+  - domain: example.com
+    type: A
+    value: 192.168.1.1
+    ttl: 300
+    action: resolve
+  
+  # Multiple A records (load balancing)
+  - domain: loadbalanced.com
+    type: A
+    values:
+      - 192.168.1.10
+      - 192.168.1.11
+      - 192.168.1.12
+    ttl: 60
+    action: resolve
+  
+  # Wildcard A record
+  - domain: "*.dev.local"
+    type: A
+    value: 127.0.0.1
+    ttl: 0  # 0 = no caching
+    action: resolve
+  
+  # ===== AAAA Records (IPv6) =====
+  
+  - domain: ipv6.example.com
+    type: AAAA
+    value: "2001:db8::1"
+    ttl: 300
+    action: resolve
+  
+  # ===== CNAME Records =====
+  
+  - domain: www.example.com
+    type: CNAME
+    value: example.com.  # Note: trailing dot for FQDN
+    ttl: 300
+    action: resolve
+  
+  - domain: blog.example.com
+    type: CNAME
+    value: myblog.wordpress.com.
+    ttl: 3600
+    action: resolve
+  
+  # ===== MX Records (Mail) =====
+  
+  - domain: example.com
+    type: MX
+    target: mail.example.com.
+    priority: 10  # Lower = higher priority
+    ttl: 3600
+    action: resolve
+  
+  - domain: example.com
+    type: MX
+    target: mail-backup.example.com.
+    priority: 20
+    ttl: 3600
+    action: resolve
+  
+  # ===== TXT Records =====
+  
+  # SPF record
+  - domain: example.com
+    type: TXT
+    value: "v=spf1 ip4:192.168.1.0/24 include:_spf.google.com ~all"
+    ttl: 3600
+    action: resolve
+  
+  # DKIM record
+  - domain: default._domainkey.example.com
+    type: TXT
+    value: "v=DKIM1; k=rsa; p=MIGfMA0GCSqGSIb3DQEBAQUAA4..."
+    ttl: 3600
+    action: resolve
+  
+  # Domain verification
+  - domain: example.com
+    type: TXT
+    value: "google-site-verification=1234567890abcdef"
+    ttl: 300
+    action: resolve
+  
+  # ===== SRV Records (Service) =====
+  
+  # SIP service
+  - domain: _sip._tcp.example.com
+    type: SRV
+    priority: 10
+    weight: 60  # Load balancing weight
+    port: 5060
+    target: sip1.example.com.
+    ttl: 300
+    action: resolve
+  
+  # LDAP service
+  - domain: _ldap._tcp.example.com
+    type: SRV
+    priority: 0
+    weight: 100
+    port: 389
+    target: ldap.example.com.
+    ttl: 300
+    action: resolve
+  
+  # ===== NS Records (Name Server) =====
+  
+  - domain: subdomain.example.com
+    type: NS
+    value: ns1.subdomain.example.com.
+    ttl: 3600
+    action: resolve
+  
+  - domain: subdomain.example.com
+    type: NS
+    value: ns2.subdomain.example.com.
+    ttl: 3600
+    action: resolve
+  
+  # ===== PTR Records (Reverse DNS) =====
+  
+  - domain: 1.1.168.192.in-addr.arpa
+    type: PTR
+    value: mail.example.com.
+    ttl: 300
+    action: resolve
+  
+  # ===== Forward Records =====
+  # These domains will be forwarded to upstream DNS servers
+  
+  - domain: google.com
+    type: A
+    action: forward
+  
+  - domain: "*.google.com"
+    type: A
+    action: forward
+  
+  # Forward all queries for .com domains
+  - domain: "*.com"
+    type: A
+    action: forward
+  
+  # ===== Blocking Records =====
+  # Block ads and trackers by resolving to invalid IPs
+  
+  - domain: doubleclick.net
+    type: A
+    value: 0.0.0.0
+    ttl: 0
+    action: resolve
+  
+  - domain: "*.doubleclick.net"
+    type: A
+    value: 0.0.0.0
+    ttl: 0
+    action: resolve
+  
+  # ===== Internal Network =====
+  
+  - domain: router.local
+    type: A
+    value: 192.168.1.1
+    ttl: 300
+    action: resolve
+  
+  - domain: nas.local
+    type: A
+    value: 192.168.1.100
+    ttl: 300
+    action: resolve
+  
+  - domain: printer.local
+    type: A
+    value: 192.168.1.50
+    ttl: 300
+    action: resolve
+  
+  # ===== Development Environment =====
+  
+  - domain: "*.test"
+    type: A
+    value: 127.0.0.1
+    ttl: 0
+    action: resolve
+  
+  - domain: api.local
+    type: A
+    value: 127.0.0.1
+    ttl: 0
+    action: resolve
+  
+  - domain: db.local
+    type: A
+    value: 127.0.0.1
+    ttl: 0
+    action: resolve
