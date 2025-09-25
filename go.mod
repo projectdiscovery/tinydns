@@ -5,9 +5,9 @@ go 1.24.0
 require (
 	github.com/miekg/dns v1.1.67
 	github.com/projectdiscovery/goflags v0.1.74
-	github.com/projectdiscovery/gologger v1.1.54
-	github.com/projectdiscovery/hmap v0.0.92
-	github.com/projectdiscovery/utils v0.4.22
+	github.com/projectdiscovery/gologger v1.1.55
+	github.com/projectdiscovery/hmap v0.0.94
+	github.com/projectdiscovery/utils v0.5.0
 	gopkg.in/yaml.v3 v3.0.1
 )
 
@@ -54,16 +54,16 @@ require (
 	github.com/tidwall/pretty v1.2.1 // indirect
 	github.com/tidwall/rtred v0.1.2 // indirect
 	github.com/tidwall/tinyqueue v0.1.1 // indirect
-	github.com/ulikunitz/xz v0.5.12 // indirect
-	go.etcd.io/bbolt v1.4.2 // indirect
+	github.com/ulikunitz/xz v0.5.14 // indirect
+	go.etcd.io/bbolt v1.3.7 // indirect
 	go4.org v0.0.0-20230225012048-214862532bf5 // indirect
-	golang.org/x/exp v0.0.0-20250718183923-645b1fa84792 // indirect
-	golang.org/x/mod v0.26.0 // indirect
-	golang.org/x/net v0.42.0 // indirect
-	golang.org/x/sync v0.16.0 // indirect
-	golang.org/x/sys v0.34.0 // indirect
-	golang.org/x/text v0.27.0 // indirect
-	golang.org/x/tools v0.35.0 // indirect
+	golang.org/x/exp v0.0.0-20250106191152-7588d65b2ba8 // indirect
+	golang.org/x/mod v0.24.0 // indirect
+	golang.org/x/net v0.40.0 // indirect
+	golang.org/x/sync v0.14.0 // indirect
+	golang.org/x/sys v0.33.0 // indirect
+	golang.org/x/text v0.25.0 // indirect
+	golang.org/x/tools v0.33.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
 	gopkg.in/djherbis/times.v1 v1.3.0 // indirect
 )
