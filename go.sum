@@ -161,8 +161,8 @@ github.com/projectdiscovery/goflags v0.1.74 h1:n85uTRj5qMosm0PFBfsvOL24I7TdWRcWq
 github.com/projectdiscovery/goflags v0.1.74/go.mod h1:UMc9/7dFz2oln+10tv6cy+7WZKTHf9UGhaNkF95emh4=
 github.com/projectdiscovery/gologger v1.1.61 h1:+jJ0Z0x6X9s69IRjbtsnOfMD8YTFTVADHMKFNu6dUGg=
 github.com/projectdiscovery/gologger v1.1.61/go.mod h1:EfuwZ1lQX7kH4rgNo0nzk5XPh2j2gpYEQUi9tkoJDJw=
-github.com/projectdiscovery/hmap v0.0.95 h1:OO6MCySlK2xMzvJmsYUwdaI7YWv/U437OtsN0Ovw72k=
-github.com/projectdiscovery/hmap v0.0.95/go.mod h1:KiTRdGd/GzX7uaoFWPrPBxPf4X/uZ9HTQ9dQ8x7x1bo=
+github.com/projectdiscovery/hmap v0.0.96 h1:gxpKGZc802/QCROuaj2l3HnfV3vzZ7AMZrK4tncKXTQ=
+github.com/projectdiscovery/hmap v0.0.96/go.mod h1:x7lxwipd1roSXnpjnRqlZUMw8OhUwA96YWQieyWVHJk=
 github.com/projectdiscovery/utils v0.7.1 h1:3zzDzA0T6SxLripNGoTbO/znDCDWE2xlk9nazRCLBV4=
 github.com/projectdiscovery/utils v0.7.1/go.mod h1:WrTQBt9Hfg5sH7q92qXUToUOhD7rWyHiWk2Gh/l1Mv8=
 github.com/prometheus/client_model v0.0.0-20190812154241-14fe0d1b01d4/go.mod h1:xMI15A0UPsDsEKsMN9yxemIoYk6Tm2C1GtYGdfGttqA=
