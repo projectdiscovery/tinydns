@@ -5,7 +5,7 @@ go 1.24.0
 require (
 	github.com/miekg/dns v1.1.62
 	github.com/projectdiscovery/goflags v0.1.74
-	github.com/projectdiscovery/gologger v1.1.64
+	github.com/projectdiscovery/gologger v1.1.65
 	github.com/projectdiscovery/hmap v0.0.98
 	github.com/projectdiscovery/utils v0.8.0
 )
@@ -20,6 +20,7 @@ require (
 	github.com/bodgit/sevenzip v1.6.0 // indirect
 	github.com/bodgit/windows v1.0.1 // indirect
 	github.com/cnf/structhash v0.0.0-20201127153200-e1b16c1ebc08 // indirect
+	github.com/djherbis/times v1.6.0 // indirect
 	github.com/dsnet/compress v0.0.2-0.20230904184137-39efe44ab707 // indirect
 	github.com/fsnotify/fsnotify v1.6.0 // indirect
 	github.com/golang/snappy v0.0.4 // indirect
@@ -31,7 +32,7 @@ require (
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/klauspost/compress v1.17.11 // indirect
 	github.com/klauspost/pgzip v1.2.6 // indirect
-	github.com/logrusorgru/aurora v2.0.3+incompatible // indirect
+	github.com/logrusorgru/aurora/v4 v4.0.0 // indirect
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/mholt/archives v0.1.0 // indirect
 	github.com/microcosm-cc/bluemonday v1.0.27 // indirect
@@ -64,7 +65,6 @@ require (
 	golang.org/x/text v0.31.0 // indirect
 	golang.org/x/tools v0.38.0 // indirect
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c // indirect
-	gopkg.in/djherbis/times.v1 v1.3.0 // indirect
 	gopkg.in/yaml.v2 v2.4.0 // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
