@@ -158,5 +158,5 @@ func (t *TinyDNS) Run() error {
 }
 
 func (t *TinyDNS) Close() {
-	t.hm.Close()
+	_ = t.hm.Close()
 }
