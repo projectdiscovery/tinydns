@@ -82,8 +82,8 @@ github.com/projectdiscovery/goflags v0.1.76 h1:4OnNU4hvzVdOc+7wcIYBnPOHzo0BcTJ5l
 github.com/projectdiscovery/goflags v0.1.76/go.mod h1:7nAP1r2Dqgn/rwmOE3EWbZWUCEJKNIhVSBGpuzJAIns=
 github.com/projectdiscovery/gologger v1.1.72 h1:PKk+aSx3jYOCBPi+FD+nTnhe+Vxx9u3K7Ega0GVlMCI=
 github.com/projectdiscovery/gologger v1.1.72/go.mod h1:mJwODZcFDg70ihINpOvZevmBtgvpP8H9/l8Y+OPhZPY=
-github.com/projectdiscovery/hmap v0.0.101 h1:zXM6YtLmsn8Q0CUUw8QavhqWmiQYwaw+/U679Rr00pc=
-github.com/projectdiscovery/hmap v0.0.101/go.mod h1:w6N9/a5H8kvyx53AhtPDUWe5Qq3D6NBDPA23glHpa/Q=
+github.com/projectdiscovery/hmap v0.0.102 h1:ybPuf7UQvuOLiHLOUbVMvd+PSlItQU5iQpP1Erl8kaU=
+github.com/projectdiscovery/hmap v0.0.102/go.mod h1:IZ92wXFmxYpdn0euZ7VFmypzOBNDwq8c3yRyIIol6XE=
 github.com/projectdiscovery/utils v0.11.1 h1:PWj1KjIASxt8icxommH72C0TQqNOvGkcSODRkiq0SQw=
 github.com/projectdiscovery/utils v0.11.1/go.mod h1:yktGrHGk2CTjNiccXovnvGrLHX9sV2bqz9nSnbA3V8M=
 github.com/saintfish/chardet v0.0.0-20230101081208-5e3ef4b5456d h1:hrujxIzL1woJ7AwssoOcM/tq5JjjG2yYOc8odClEiXA=
