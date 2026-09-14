@@ -5,7 +5,7 @@ go 1.25.0
 require (
 	github.com/miekg/dns v1.1.72
 	github.com/projectdiscovery/goflags v0.1.76
-	github.com/projectdiscovery/gologger v1.1.72
+	github.com/projectdiscovery/gologger v1.1.73
 	github.com/projectdiscovery/hmap v0.0.101
 	github.com/projectdiscovery/utils v0.11.1
 )
