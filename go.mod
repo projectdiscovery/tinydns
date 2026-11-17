@@ -5,9 +5,9 @@ go 1.26.0
 require (
 	github.com/miekg/dns v1.1.72
 	github.com/projectdiscovery/goflags v0.2.1
-	github.com/projectdiscovery/gologger v1.1.75
-	github.com/projectdiscovery/hmap v0.0.104
-	github.com/projectdiscovery/utils v0.11.12
+	github.com/projectdiscovery/gologger v1.1.76
+	github.com/projectdiscovery/hmap v0.0.105
+	github.com/projectdiscovery/utils v0.11.13
 )
 
 require (
