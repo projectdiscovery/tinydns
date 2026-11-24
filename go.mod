@@ -4,10 +4,10 @@ go 1.26.0
 
 require (
 	github.com/miekg/dns v1.1.72
-	github.com/projectdiscovery/goflags v0.2.1
-	github.com/projectdiscovery/gologger v1.1.76
-	github.com/projectdiscovery/hmap v0.0.105
-	github.com/projectdiscovery/utils v0.11.14
+	github.com/projectdiscovery/goflags v0.2.2
+	github.com/projectdiscovery/gologger v1.1.77
+	github.com/projectdiscovery/hmap v0.0.106
+	github.com/projectdiscovery/utils v0.11.16
 )
 
 require (
@@ -31,7 +31,7 @@ require (
 	github.com/modern-go/reflect2 v1.0.2 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/power-devops/perfstat v0.0.0-20240221224432-82ca36839d55 // indirect
-	github.com/projectdiscovery/blackrock v0.0.2 // indirect
+	github.com/projectdiscovery/blackrock v0.0.4 // indirect
 	github.com/saintfish/chardet v0.0.0-20230101081208-5e3ef4b5456d // indirect
 	github.com/shirou/gopsutil/v4 v4.26.3 // indirect
 	github.com/syndtr/goleveldb v1.0.0 // indirect
